@@ -16,7 +16,8 @@
     "yarn.lock",
     ".git",
     ".gitignore",
-    "LICENSE"
+    "LICENSE",
+    "*.md"
   ],
   "words": [
     "Drawably",
