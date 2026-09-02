@@ -1,0 +1,13 @@
+[Desktop Entry]
+Version=1.0
+Name=DrawablyPlayer
+Comment=Drawably style music & video player
+# The Exec line includes %u to pass the URL to the application
+Exec=/usr/local/bin/drawablyplayer %u
+Terminal=false
+Type=Application
+Icon=drawablyplayer
+Categories=Utility;
+StartupWMClass=drawablyplayer
+
+ 

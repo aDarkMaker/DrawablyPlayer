@@ -1,0 +1,49 @@
+# This file contains the configuration for this project.
+# When you update `info` or `fileAssociations`, run `wails3 update build-assets -config build/config.yml` to update the assets.
+# Note that this will overwrite any changes you have made to the assets.
+version: '3'
+
+# This information is used to generate the build assets.
+info:
+  companyName: "aDarkMaker"
+  productName: "DrawablyPlayer"
+  productIdentifier: "com.adarkmaker.drawablyplayer"
+  description: "Drawably style music & video player"
+  copyright: "(c) 2026, aDarkMaker"
+  comments: "A Wails v3 based cross-platform music/video player"
+  version: "0.1.0"
+
+# Dev mode configuration
+dev_mode:
+  root_path: .
+  log_level: warn
+  debounce: 1000
+  ignore:
+    dir:
+      - .git
+      - node_modules
+      - frontend
+      - bin
+    file:
+      - .DS_Store
+      - .gitignore
+      - .gitkeep
+      - "*_test.go"
+    watched_extension:
+      - "*.go"
+      - "*.js" # Watch for changes to JS/TS files included using the //wails:include directive.
+      - "*.ts" # The frontend directory will be excluded entirely by the setting above.
+    git_ignore: true
+  executes:
+    - cmd: wails3 build DEV=true
+      type: blocking
+    - cmd: wails3 task common:dev:frontend
+      type: background
+    - cmd: wails3 task run
+      type: primary
+
+# File Associations
+fileAssociations:
+
+# Other data
+other: []

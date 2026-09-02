@@ -1,0 +1,15 @@
+{
+	"fixed": {
+		"file_version": "0.1.0"
+	},
+	"info": {
+		"0000": {
+			"ProductVersion": "0.1.0",
+			"CompanyName": "aDarkMaker",
+			"FileDescription": "Drawably style music & video player",
+			"LegalCopyright": "© 2026, aDarkMaker",
+			"ProductName": "DrawablyPlayer",
+			"Comments": "A Wails v3 based music/video player"
+		}
+	}
+}

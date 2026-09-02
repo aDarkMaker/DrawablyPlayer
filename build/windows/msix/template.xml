@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MsixPackagingToolTemplate
+    xmlns="http://schemas.microsoft.com/msix/packaging/msixpackagingtool/template/2022">
+    <Settings
+        AllowTelemetry="false"
+        ApplyACLsToPackageFiles="true"
+        GenerateCommandLineFile="true"
+        AllowPromptForPassword="false">
+    </Settings>
+    <Installer
+        Path="drawablyplayer"
+        Arguments=""
+        InstallLocation="C:\Program Files\aDarkMaker\DrawablyPlayer">
+    </Installer>
+    <PackageInformation
+        PackageName="DrawablyPlayer"
+        PackageDisplayName="DrawablyPlayer"
+        PublisherName="CN=aDarkMaker"
+        PublisherDisplayName="aDarkMaker"
+        Version="0.1.0.0"
+        PackageDescription="Drawably style music & video player">
+        <Capabilities>
+            <Capability Name="runFullTrust" />
+            
+        </Capabilities>
+        <Applications>
+            <Application
+                Id="com.adarkmaker.drawablyplayer"
+                Description="Drawably style music & video player"
+                DisplayName="DrawablyPlayer"
+                ExecutableName="drawablyplayer"
+                EntryPoint="Windows.FullTrustApplication">
+                
+            </Application>
+        </Applications>
+        <Resources>
+            <Resource Language="en-us" />
+        </Resources>
+        <Dependencies>
+            <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.17763.0" MaxVersionTested="10.0.19041.0" />
+        </Dependencies>
+        <Properties>
+            <Framework>false</Framework>
+            <DisplayName>DrawablyPlayer</DisplayName>
+            <PublisherDisplayName>aDarkMaker</PublisherDisplayName>
+            <Description>Drawably style music & video player</Description>
+            <Logo>Assets\AppIcon.png</Logo>
+        </Properties>
+    </PackageInformation>
+    <SaveLocation PackagePath="drawablyplayer.msix" />
+    <PackageIntegrity>
+        <CertificatePath></CertificatePath>
+    </PackageIntegrity>
+</MsixPackagingToolTemplate>
